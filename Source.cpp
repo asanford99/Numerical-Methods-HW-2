@@ -1,23 +1,51 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include<vector>
 using namespace std;
 
 
 
 int getSize(string fileNamePar) {
-	std::ifstream inputFile(fileNamePar);
+	ifstream inputFile;
 	string fileSize;
 
-	getline(inputFile, fileSize);
+	inputFile.open(fileNamePar);
+
+	inputFile >> fileSize;
+
+	inputFile.close;
 
 	return stoi(fileSize);
+}
+
+vector <vector <int>> createMatrix(int arraySizePar, string fileNamePar) {
+	ifstream inputFile;
+	vector <vector <int>> returnMatrix;
+
+	inputFile.open(fileNamePar);
+	
+	for (int i = 0; i < arraySizePar; i++) {
+		if (i == 0) {
+
+		}
+		else {
+			for (int j = 0; j < arraySizePar; j++) {
+				inputFile >> ;
+			}
+
+		}
+
+	}
+
 }
 
 int main(int argc, char* argv[]) {
 
 	string fileName;
 	string sppArgument;
+
+	vector <vector <int>> userMatrix;
 
 	bool sppFlag = false;
 
@@ -44,9 +72,9 @@ int main(int argc, char* argv[]) {
 		cout << "Invalid input. Too many arguments.";
 	}
 
-	const int systemSize = getSize(fileName);
+	int systemSize = getSize(fileName);
 
-	int systemVariables[systemSize][systemSize] = ;
+	userMatrix = createMatrix(systemSize, fileName);
 	
 
 	return 0;
